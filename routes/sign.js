@@ -20,7 +20,7 @@ listener = repo.createListener();
 
 
 const router = express.Router();
-const privateKey = process.env.PRIKEY;
+const privateKey = process.env.PRIKEY.toHex();
 const tkpk = sym.Account.createFromPrivateKey(privateKey, sym.NetworkType.TEST_NET, );
 
 
