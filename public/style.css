@@ -1,0 +1,155 @@
+body {
+    background: rgb(242, 242, 242);
+  }
+  
+  h1 {
+    color:rgba(22, 22, 22, 0.4);
+    font-size: 90px;
+    text-align: left;
+    margin-left: 80px;
+  }
+  
+  .left {
+    width: 800px;
+  }
+  .right {
+    width: 100%;
+  }
+  
+  .account-card {
+    background: white;
+    border-radius: 16px;
+    margin: 16px;
+    padding: 16px;
+  }
+  
+  .upfile-card {
+    background: white;
+    border-radius: 16px;
+    margin: 16px;
+    padding: 16px;
+   
+  }
+  .disp-card {
+    background: white;
+    border-radius: 16px;
+    margin: 16px;
+    padding: 16px;
+  }
+  .tx-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px;
+  }
+  
+  .textfiled-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+  }
+  
+  .textfiled {
+    width: 400px;
+  }
+  
+  #wallet-addr {
+    font-size: 24px;
+  }
+  
+  .container {
+    font-size: 24px;
+    margin: 16px;
+  }
+  .info{
+    justify-content: space-between;
+    margin: 80px;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px;
+    margin-top: 30px;
+  }
+  .radio-wrapper {
+    margin: 8px;
+
+  }
+  .checkbox-wrapper {
+    display: flex;
+    margin:8px;
+  }
+  .buttonarea-wrapper {
+      margin: 10px;
+  }
+  .gene {
+    position: flex;
+    display: inline-block;
+    font-size: 1.3rem;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #00BCD4;
+    background: #ECECEC;
+    transition: .4s;
+    border: 2px solid transparent;
+    border-radius: 5px;
+   
+  }
+  
+  .gene:hover {
+    background: #00bcd4;
+    color: white;
+  }
+  
+  .btn {
+    position: relative;
+    display: inline-block;
+    font-size: 1.3rem;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #00BCD4;
+    background: #ECECEC;
+    transition: .4s;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin-right: 100px;
+  }
+  
+  .btn:hover {
+    background: #00bcd4;
+    color: white;
+  }
+  img {
+        width:150px;
+        height:150px;
+  
+        object-fit:contain;
+  }
+  .dispmetal{
+     width:1000px;
+        height:1000px;
+  object-fit:none}
+  p{
+     margin: auto;
+  }
+  
+  #loading {
+   display: table;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: #fff;
+   opacity: 0.8;
+  }
+   
+  #loading .loadingMsg {
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+   padding-top: 140px;
+   background: url("Preloader_1.gif") center center no-repeat;
+  }
+  
+  

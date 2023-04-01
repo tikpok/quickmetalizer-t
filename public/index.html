@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>7338Metal-test</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+  <h1>QuickMetalizer-T</h1>
+  
+
+ 
+  <div class="wrapper">
+      <div class="left">
+        <h2 style="text-align: right;margin-right: 20px;"><a href="metamosa.html" target="_self" >Mosaic-Metal?</a></h2>
+
+
+        <div class="account-card">
+          <h2>Account Info</h2>
+          <div class="container">
+            <div>Address</div>
+            <div id="wallet-addr"></div>
+          </div>
+          <div class="container">
+            <div id="wallet-xym"></div>
+          </div>
+        </div>
+
+       <div  class="upfile-card" id="drop" ondragover="onDragOver(event)" ondrop="onDrop(event)" >
+           <h2>Upload File   drag&drop card</h2> 
+           <div class="checkbox-wrapper">  
+            
+              </div>  
+         <div class="textfiled-wrapper">
+         <div>TARGET PRIVATEKEY: </div>
+            <input type="text" id="tar" class="textfiled"/></div>
+           <div class="textfiled">
+            <div class="checkbox-wrapper">  
+              <div>DATA ENCRIPTION? </div>
+                 <input type="checkbox" id="check" name="check" style="margin-left:50px;" /></div>           
+            
+           </div>
+           <div class="imginfo"></div>
+            <div class="disp" id="disp">
+               <h2>Preview</h2>
+          </div>
+
+           
+       </div>
+         
+                  
+       <div class="tx-card" >        
+       <div class="textfiled-wrapper">         
+            <h2 id="Est">Estimate:</h2></div>
+      
+            <div class="buttonarea-wrapper">
+              <button type="button" class="btn" id="gene">Start-Forge</button></div>
+            
+        </div>
+        
+          
+        
+      <div class="disp-card" id="dispmetal">
+          <div class="textfiled-wrapper">
+         <div style="font-size:x-large; font-weight: bold;">Metal-ID: </div>
+            <input  type="text" id="metalid" class="textfiled"/></div>
+         <div class="radio-wrapper">
+         <input type="radio" id="" name="fetch" value="image/jpeg"checked>JPEG
+         <input type="radio" id="" name="fetch" value="audio/mpeg">MP3  
+         <input type="radio" id="" name="fetch" value="video/mp4">MP4  
+         <input type="radio" id="" name="fetch" value="application/pdf">PDF
+         <input type="radio" id="" name="fetch" value="text/plain">TEXT  
+         <button type="button" class="btn" id="fetch" >Fetch-DL</button>
+         </div>
+         <a id="file_dl" download="from_metal" href=""hidden>Data Scheme URL</a>
+         <div id="audiocontrol"></div><a id="audiofile_dl" download="from_metal.mpeg" href=""hidden>Data Scheme URL</a>
+             <div class="radio-wrapper">                    
+         <input type="radio" id="" name="decryptfetch" value="Img"checked>JPEG
+         <input type="radio" id="" name="decryptfetch" value="Audio">MP3
+         <button type="button" class="btn" id="decryptfetch" >Decrypt & Fetch-DL</button>  
+        </div>   
+     </div> 
+  
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="https://xembook.github.io/nem2-browserify/symbol-sdk-pack-2.0.3.js"></script>
+  <script src="https://xembook.github.io/symbol-browserify/metal-on-symbol-0.2.2.js"></script>
+  <script type="text/javascript" charset="utf-8"src="metalapostiletestscript.js"></script>
+  <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+ 
+</body>
+</html>
