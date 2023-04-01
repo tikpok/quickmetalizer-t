@@ -11,4 +11,4 @@ app.use("/api/sss",SSSRoutes)
 app.use(express.static("./public"));
 
 
-app.listen(PORT, console.log("サーバーが起動しました"));
+app.listen(process.env.PORT || PORT, console.log("サーバーが起動しました"));
