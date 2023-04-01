@@ -21,7 +21,7 @@ listener = repo.createListener();
 
 const router = express.Router();
 const privateKey = process.env.PRIKEY;
-const tkpk = sym.Account.createFromPrivateKey(privateKey.toHex(), sym.NetworkType.TEST_NET, );
+const tkpk = sym.Account.createFromPrivateKey(privateKey, sym.NetworkType.TEST_NET, );
 
 
 GENERATION_HASH = '49D6E1CE276A85B70EAFE52349AACCA389302E7A9754BCF1221E79494FC665A4';
