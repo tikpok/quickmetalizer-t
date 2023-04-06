@@ -18,6 +18,7 @@ const metal = require("/node_modules/metal-on-symbol");
 
 
 
+
 const ss = new metal.SymbolService({
     node_url: "https://mikun-testnet.tk:3001" ,
     repo_factory_config:{
@@ -107,11 +108,11 @@ accountHttp.getAccountInfo(sssaddress)
   dispLoading("processing...");
   console.log(`File added: ${file.name}`);
 }).on("success", function(file, response) {
-  
-  console.log(response);
+  totalhandlingfee = response;
+  console.log(totalhandlingfee);
   
   var Est = document.getElementById("Est");
-	Est.innerHTML = "Estimate:" + Math.ceil (response/ Math.pow(10, 6) )+("tkpk");
+	Est.innerHTML = "Estimate:" + Math.ceil (totalhandlingfee/ Math.pow(10, 6) )+("tkpk");
   hideLoading()
 
 }).on("success", function(file, response) {
@@ -132,6 +133,7 @@ dispLoading("processing...");
     console.log(pubkey);
   axios.post("./api/sss", {
     data: sssPublicAccount,
+    total: totalhandlingfee,
   })
   .then(async function (response) {
     
@@ -151,6 +153,7 @@ let sssSignedTxSignerPublicKey = ssssignedTx.signerPublicKey;
     .post("./api/sss/recreate", {
       signature: ssssignedsignature,
       publickey: sssSignedTxSignerPublicKey,
+      
     })
     .then((response) => {
       let data = response.data;

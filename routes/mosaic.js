@@ -73,8 +73,7 @@ mosarouter.get("/", (req, res) =>{
     for (let i = 0 ; i < total.length ; i++){
     totalFee += total[i];
     
-    console.log(totalFee);
-  
+      
     }
     return {
       
@@ -93,7 +92,7 @@ mosarouter.get("/", (req, res) =>{
           []
     ).then(({key,uint8Array,totalFee}) => {
 
-      console.log(`Forged! key=${key.toHex()},uint8array=${uint8Array}`);
+      console.log(`key=${key.toHex()},uint8array=${uint8Array}`);
 
       supplyMutable = false; 
       transferable = true; 
@@ -139,6 +138,7 @@ mosarouter.get("/", (req, res) =>{
       console.log(totalhandlingfee);
       res.json(totalhandlingfee);
       return {totalhandlingfee ,f};
+      
     });
 
 

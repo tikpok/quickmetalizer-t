@@ -47,7 +47,7 @@ getsss.use(express.json());
 getsss.post("/",(req,res) =>{
   
   async function tx() {
-  
+  try{
   privateKey = process.env.PRIKEY;
   tkpk = sym.Account.createFromPrivateKey(privateKey, sym.NetworkType.TEST_NET, );
 var sssPublicAccount = req.body.data;
@@ -68,8 +68,13 @@ accountInfo.mosaics.forEach( mosaic => {
         }
 });
 console.log(mosaicList);
+ 
+var totalhandlingfee = req.body.total;
+console.log(totalhandlingfee);
+
 
 const encryptedMessage = tkpk.encryptMessage(alicekey.toString(),sss,);
+
 
 tkpktx = sym.TransferTransaction.create(
   sym.Deadline.create(EPOCH_ADJUSTMENT),
@@ -161,8 +166,11 @@ alicesignedHash = sym.Transaction.createTransactionHash(payload,Buffer.from(GENE
 console.log(alicesignedHash);
 
 res.send (payload);
-
-
+ }
+ catch(e)  {
+  console.error(e);
+  process.exit(1);
+};
  
 
 }tx();
@@ -280,10 +288,6 @@ mosaicId = mosaicDefTx.mosaicId.toHex();
 
   });
 
-  getsss.post("/encriptedrecreate",(req,res) =>{
-console.log("encripted");
-
-  })
  
 module.exports = getsss;
 
