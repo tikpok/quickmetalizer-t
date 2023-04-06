@@ -11,8 +11,7 @@ var NODE = 'https://mikun-testnet.tk:3001';
    EPOCH_ADJUSTMENT = 1667250467;
 
    const XYM_ID = '72C0212E67A08BCE'
-   const tkpk_ID = "370205831199DE9C"
-
+   
 
 
 const metal = require("/node_modules/metal-on-symbol");
